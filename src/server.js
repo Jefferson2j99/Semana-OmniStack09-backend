@@ -13,12 +13,6 @@ mongoose.connect(process.env.URL_DB, {
   useUnifiedTopology: true
 });
 
-// GET, POST, PUT, DELETE
-
-//req.query = Acessar query params (para filtros)
-//req.params = Acessar routes params (para edição ou deletar)
-//req.body = Acessar corpo da requisição (para criação ou edição)
-
 app.use(cors());
 app.use(express.json());
 app.use("/files", express.static(path.resolve(__dirname, "..", "uploads")));
